@@ -1,17 +1,20 @@
+BIN=./bin/
+SRC=./src/
+
 main : main.o mysum.o
-	g++ -o main main.o mysum.o
+	g++ -o $(BIN)main $(BIN)main.o $(BIN)mysum.o
 
 test : test.o mysum.o
-	g++ -o test test.o mysum.o
+	g++ -o $(BIN)test $(BIN)test.o $(BIN)mysum.o
 
-main.o : main.cpp mysum.hpp
-	g++ -c main.cpp
+test.o : $(SRC)test.cpp $(SRC)catch.hpp
+	g++ -c $(SRC)test.cpp -o $(BIN)test.o
 
-test.o : test.cpp catch.hpp
-	g++ -c test.cpp
+main.o : $(SRC)main.cpp $(SRC)mysum.hpp
+	g++ -c $(SRC)main.cpp -o $(BIN)main.o
 	
-mysum.o : mysum.cpp mysum.hpp
-	g++ -c mysum.cpp
+mysum.o : $(SRC)mysum.cpp $(SRC)mysum.hpp
+	g++ -c $(SRC)mysum.cpp -o $(BIN)mysum.o
 
 clean : 
-	rm main test main.o test.o mysum.o
+	rm $(BIN)main $(BIN)test $(BIN)main.o $(BIN)test.o $(BIN)mysum.o
