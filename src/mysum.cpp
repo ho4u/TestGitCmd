@@ -8,6 +8,6 @@ int mysum(int a, int b)
 
 int print()
 {
-    std::cout << "Hello" << std::endl;
+    std::cout << "Goodbye!" << std::endl;
     return 0;
 }
