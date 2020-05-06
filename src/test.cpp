@@ -8,4 +8,5 @@ TEST_CASE( "mysum computed", "[factorial]" ) {
     REQUIRE( mysum(20, 15) == 35 );
     REQUIRE( mysum(-10, 10) == 0 );
     REQUIRE( mysum(-25, -15) == -40 );
+    REQUIRE( print() == 0);
 }

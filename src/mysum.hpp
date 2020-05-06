@@ -2,5 +2,6 @@
 #define MYSUM_H
 
 int mysum(int a, int b);
+int print();
 
 #endif
