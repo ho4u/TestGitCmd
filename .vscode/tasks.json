@@ -6,7 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-			"command": "make ${fileBasenameNoExtension}", 
+			"command": "make bin/${fileBasenameNoExtension}", 
 			"group": {
 				"kind": "build",
 				"isDefault": true
